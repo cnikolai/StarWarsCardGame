@@ -85,7 +85,12 @@ class CardCollectionViewController: UICollectionViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       
+        //IDO
+        if segue.identifier == "toFilterVC" {
+            guard let destinationVC = segue.destination as? FilterViewController else { return }
+            // Step 4
+            destinationVC.delegate = self
+        }
     }
 }
 

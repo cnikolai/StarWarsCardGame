@@ -25,10 +25,14 @@ class FilterViewController: UIViewController {
     
     // MARK:- Actions
     @IBAction func sithButtonTapped(_ sender: Any) {
-        
+        // Step 5
+        delegate?.factionWasSelected(faction: "sith")
+        self.dismiss(animated: true)
     }
     
     @IBAction func jediButtonTapped(_ sender: Any) {
-        
+        // Step 5
+        delegate?.factionWasSelected(faction: "jedi")
+        self.dismiss(animated: true)
     }
 }
