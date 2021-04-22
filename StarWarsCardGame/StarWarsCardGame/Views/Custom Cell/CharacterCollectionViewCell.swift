@@ -22,6 +22,7 @@ class CharacterCollectionViewCell: UICollectionViewCell {
     // MARK:- Helpers
     func updateViews() {
         guard let character = character else { return }
+        characterImageView.contentMode = .scaleAspectFill
         characterImageView.image = character.photo
     }
 }

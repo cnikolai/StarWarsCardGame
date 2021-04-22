@@ -10,6 +10,7 @@
 		37FB25082631D20B000A11BF /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB25072631D20B000A11BF /* Character.swift */; };
 		37FB250C2631D95A000A11BF /* CardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB250B2631D95A000A11BF /* CardCollectionViewController.swift */; };
 		37FB25102631DA21000A11BF /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB250F2631DA21000A11BF /* CharacterCollectionViewCell.swift */; };
+		37FB25162631F0A9000A11BF /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB25152631F0A9000A11BF /* FilterViewController.swift */; };
 		7EDB74E025AF34B500B80B7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDB74DF25AF34B500B80B7D /* AppDelegate.swift */; };
 		7EDB74E225AF34B500B80B7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDB74E125AF34B500B80B7D /* SceneDelegate.swift */; };
 		7EDB74E725AF34B500B80B7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EDB74E525AF34B500B80B7D /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 		37FB25072631D20B000A11BF /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		37FB250B2631D95A000A11BF /* CardCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewController.swift; sourceTree = "<group>"; };
 		37FB250F2631DA21000A11BF /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
+		37FB25152631F0A9000A11BF /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		7EDB74DC25AF34B500B80B7D /* StarWarsCardGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsCardGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EDB74DF25AF34B500B80B7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EDB74E125AF34B500B80B7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				37FB250B2631D95A000A11BF /* CardCollectionViewController.swift */,
+				37FB25152631F0A9000A11BF /* FilterViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -72,6 +75,13 @@
 				37FB250F2631DA21000A11BF /* CharacterCollectionViewCell.swift */,
 			);
 			path = "Custom Cell";
+			sourceTree = "<group>";
+		};
+		37FB25132631E37B000A11BF /* Helpers and Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Helpers and Extensions";
 			sourceTree = "<group>";
 		};
 		7EDB74D325AF34B500B80B7D = {
@@ -97,6 +107,7 @@
 				7EDB74FB25AF356600B80B7D /* Controllers */,
 				7EDB74FA25AF355B00B80B7D /* Views */,
 				7EDB74F425AF34C400B80B7D /* Resources */,
+				37FB25132631E37B000A11BF /* Helpers and Extensions */,
 			);
 			path = StarWarsCardGame;
 			sourceTree = "<group>";
@@ -218,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37FB25162631F0A9000A11BF /* FilterViewController.swift in Sources */,
 				37FB25102631DA21000A11BF /* CharacterCollectionViewCell.swift in Sources */,
 				7EDB74E025AF34B500B80B7D /* AppDelegate.swift in Sources */,
 				7EDB74FD25AF359500B80B7D /* CharacterController.swift in Sources */,
