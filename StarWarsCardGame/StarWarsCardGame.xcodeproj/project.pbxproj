@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37FB25082631D20B000A11BF /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB25072631D20B000A11BF /* Character.swift */; };
+		37FB250C2631D95A000A11BF /* CardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB250B2631D95A000A11BF /* CardCollectionViewController.swift */; };
+		37FB25102631DA21000A11BF /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB250F2631DA21000A11BF /* CharacterCollectionViewCell.swift */; };
 		7EDB74E025AF34B500B80B7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDB74DF25AF34B500B80B7D /* AppDelegate.swift */; };
 		7EDB74E225AF34B500B80B7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDB74E125AF34B500B80B7D /* SceneDelegate.swift */; };
 		7EDB74E725AF34B500B80B7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EDB74E525AF34B500B80B7D /* Main.storyboard */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37FB25072631D20B000A11BF /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		37FB250B2631D95A000A11BF /* CardCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewController.swift; sourceTree = "<group>"; };
+		37FB250F2631DA21000A11BF /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
 		7EDB74DC25AF34B500B80B7D /* StarWarsCardGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsCardGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EDB74DF25AF34B500B80B7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EDB74E125AF34B500B80B7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +43,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37FB25032631D071000A11BF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				37FB25072631D20B000A11BF /* Character.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		37FB25042631D0C8000A11BF /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		37FB25052631D172000A11BF /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				37FB250B2631D95A000A11BF /* CardCollectionViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		37FB250E2631DA07000A11BF /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				37FB250F2631DA21000A11BF /* CharacterCollectionViewCell.swift */,
+			);
+			path = "Custom Cell";
+			sourceTree = "<group>";
+		};
 		7EDB74D325AF34B500B80B7D = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +93,7 @@
 		7EDB74DE25AF34B500B80B7D /* StarWarsCardGame */ = {
 			isa = PBXGroup;
 			children = (
+				37FB25032631D071000A11BF /* Models */,
 				7EDB74FB25AF356600B80B7D /* Controllers */,
 				7EDB74FA25AF355B00B80B7D /* Views */,
 				7EDB74F425AF34C400B80B7D /* Resources */,
@@ -94,7 +132,9 @@
 		7EDB74FA25AF355B00B80B7D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				37FB250E2631DA07000A11BF /* Custom Cell */,
 				7EDB74F925AF355300B80B7D /* Storyboards */,
+				37FB25042631D0C8000A11BF /* Custom Views */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -103,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				7EDB74F625AF34D100B80B7D /* Model Controller */,
+				37FB25052631D172000A11BF /* View Controllers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -177,9 +218,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37FB25102631DA21000A11BF /* CharacterCollectionViewCell.swift in Sources */,
 				7EDB74E025AF34B500B80B7D /* AppDelegate.swift in Sources */,
 				7EDB74FD25AF359500B80B7D /* CharacterController.swift in Sources */,
 				7EDB74E225AF34B500B80B7D /* SceneDelegate.swift in Sources */,
+				37FB250C2631D95A000A11BF /* CardCollectionViewController.swift in Sources */,
+				37FB25082631D20B000A11BF /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

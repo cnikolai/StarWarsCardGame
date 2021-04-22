@@ -1,8 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j47-4T-dlx">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Card Collection View Controller-->
+        <scene sceneID="BT6-rm-91C">
+            <objects>
+                <collectionViewController id="nwf-vR-Wbn" customClass="CardCollectionViewController" customModule="StarWarsCardGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="eOe-3C-zN4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8Pc-BZ-e8p">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="characterCell" id="lHx-ZE-Nz4" customClass="CharacterCollectionViewCell" customModule="StarWarsCardGame" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mT5-5k-iOt">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bgp-fq-ei0">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="Bgp-fq-ei0" secondAttribute="bottom" id="EQD-gi-d41"/>
+                                        <constraint firstItem="Bgp-fq-ei0" firstAttribute="top" secondItem="mT5-5k-iOt" secondAttribute="top" id="JH0-b1-vSq"/>
+                                        <constraint firstAttribute="trailing" secondItem="Bgp-fq-ei0" secondAttribute="trailing" id="TbH-ap-All"/>
+                                        <constraint firstItem="Bgp-fq-ei0" firstAttribute="leading" secondItem="mT5-5k-iOt" secondAttribute="leading" id="VRb-kf-6eb"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="characterImageView" destination="Bgp-fq-ei0" id="Stw-67-jhS"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="nwf-vR-Wbn" id="Emb-DI-VOa"/>
+                            <outlet property="delegate" destination="nwf-vR-Wbn" id="KXe-8i-rs9"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="CmE-cA-fUV">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="line.horizontal.3.decrease" catalog="system" id="Ac2-HM-EWL">
+                            <connections>
+                                <segue destination="bRI-4T-ei5" kind="presentation" id="b0q-H2-B68"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aQE-ot-5Wh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1055.072463768116" y="157.36607142857142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="f4m-6v-T3S">
+            <objects>
+                <viewController id="bRI-4T-ei5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2zh-AT-Gpx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="bRB-WL-jEL">
+                                <rect key="frame" x="157" y="284" width="100" height="240"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hmg-gg-nIc">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <state key="normal" image="sith"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odI-64-g7r">
+                                        <rect key="frame" x="0.0" y="140" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="0Ng-gD-2Rr"/>
+                                            <constraint firstAttribute="width" secondItem="odI-64-g7r" secondAttribute="height" multiplier="1:1" id="PhH-Ts-tS0"/>
+                                        </constraints>
+                                        <state key="normal" image="jedi"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3BA-zB-pRZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bRB-WL-jEL" firstAttribute="centerX" secondItem="3BA-zB-pRZ" secondAttribute="centerX" id="D8r-8O-tW9"/>
+                            <constraint firstItem="bRB-WL-jEL" firstAttribute="centerY" secondItem="3BA-zB-pRZ" secondAttribute="centerY" id="Sde-nQ-G4P"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6EV-zw-BT4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1812" y="157"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dQY-W3-7KM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="j47-4T-dlx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="m26-uQ-bRs">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nwf-vR-Wbn" kind="relationship" relationship="rootViewController" id="hyO-3A-wm6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bag-pE-8v8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="144.92753623188406" y="157.36607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="jedi" width="600" height="600"/>
+        <image name="line.horizontal.3.decrease" catalog="system" width="128" height="73"/>
+        <image name="sith" width="180" height="180"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
